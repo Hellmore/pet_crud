@@ -49,39 +49,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         echo "Usuário não encontrado!";
     }
 }
-
-$conn->close();
 ?>
 
 <!doctype html>
-<html lang="pt-br">
-  <head>
+<html lang="pt-BR">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-  </head>
-  <body>
-    <div>
-        <form action="login.php" method="post">
-            <div>
-              <h1>Login</h1>
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" required>
-            </div>
-            <div>
-                <button type="submit">Entrar</button>
-            </div>
-            </div>
-        </form>
-    </div>
-    <div>
-        <button onclick="window.location.href='cadastro_form.php'">Ir para Cadastro</button>
-    </div>
-  </body>
-</html>
+    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <?php if (isset($erro)): ?>
+            <div class="erro"><?php echo $erro; ?></div>
+        <?php endif; ?>
+        <form method="POST" action="" class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <input class="btn-submit" type="submit" value="Entrar">
+        </form>
+        <p>Ainda não tem uma conta? <a href="cadastro_forms.php">Cadastre-se</a></p>
+    </div>
+    
+</body>
+</html>
