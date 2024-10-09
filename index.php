@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 echo "<td>
                                     <form method='POST' action='deletar_produto.php' onsubmit=\"return confirm('Tem certeza que deseja deletar este produto?');\">
                                         <input type='hidden' name='id' value='" . $row["id"] . "'>
-                                        <input class='btn-table' type='submit' value='Deletar'>
+                                        <input  type='submit' value='Deletar' style='border:none; padding-top:7px; padding-bottom:7px; padding-left:8px; padding-right:8px; font-family:Poppins, sans-serif; background-color: #2ecc71; color:white;  border-radius: 5px; font: size 1rem;'>
                                     </form>
                                 </td>";
                             }

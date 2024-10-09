@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         <?php endif; ?>
         <form method="POST" action="" class="form">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input style= 'padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;' class="input-email" type="email" id="email" name="email" required>
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>

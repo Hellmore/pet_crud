@@ -96,6 +96,18 @@ h1 {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    border: none;
+    border-color: #2ecc71;
+    transition: background-color 0.3s;
+}
+
+.btndelete{
+    padding: 10px 10px;
+    background-color: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
     transition: background-color 0.3s;
 }
 
